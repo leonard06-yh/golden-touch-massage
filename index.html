@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Golden Touch Massage | United States of America</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #fffaf3;
+            color: #333;
+        }
+
+        /* HEADER */
+        header {
+            background: #241506;
+            color: #d4af37;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 18px;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+
+            background:
+                linear-gradient(
+                    rgba(20, 10, 2, 0.65),
+                    rgba(20, 10, 2, 0.65)
+                ),
+                url("https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1600&q=80");
+
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            color: #d4af37;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #d4af37;
+            color: #241506;
+            padding: 14px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 6px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: white;
+            transform: scale(1.05);
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 70px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 35px;
+            color: #241506;
+        }
+
+        .section-title p {
+            margin-top: 10px;
+            color: #777;
+        }
+
+        /* ABOUT */
+        .about {
+            text-align: center;
+            max-width: 850px;
+            margin: auto;
+            line-height: 1.8;
+            font-size: 17px;
+        }
+
+        /* SERVICES */
+        .services {
+            background: #f7efe3;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px 20px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .service-card .icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            color: #241506;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* PRICING */
+        .pricing {
+            background: #fffaf3;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .price-card {
+            background: #241506;
+            color: white;
+            padding: 30px 20px;
+            border: 1px solid #d4af37;
+            border-radius: 15px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .price-card:hover {
+            transform: translateY(-7px);
+        }
+
+        .price-card h3 {
+            color: #d4af37;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 34px;
+            font-weight: bold;
+            margin: 15px 0;
+            color: #d4af37;
+        }
+
+        .price-card p {
+            line-height: 1.6;
+        }
+
+        .featured {
+            background: #3a250d;
+        }
+
+        /* CONTACT */
+        .contact {
+            text-align: center;
+            background: #f7efe3;
+        }
+
+        .contact-box {
+            max-width: 700px;
+            margin: auto;
+            background: #241506;
+            color: white;
+            padding: 45px 25px;
+            border-radius: 20px;
+        }
+
+        .contact-box h3 {
+            color: #d4af37;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .contact-box p {
+            margin: 12px 0;
+        }
+
+        .contact-buttons {
+            margin-top: 25px;
+        }
+
+        .signal-btn {
+            background: #3a76f0;
+            color: white;
+        }
+
+        .tiktok-btn {
+            background: #111;
+            color: white;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #160c03;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        footer span {
+            color: #d4af37;
+        }
+
+        /* MOBILE */
+        @media (max-width: 700px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                text-align: center;
+            }
+
+            nav a {
+                margin: 0 5px;
+                font-size: 13px;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            section {
+                padding: 55px 5%;
+            }
+
+            .section-title h2 {
+                font-size: 30px;
+            }
+
+            .price {
+                font-size: 30px;
+            }
+
+            .contact-buttons a {
+                display: block;
+                margin: 10px auto;
+                max-width: 280px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <div class="logo">
+            Golden Touch Massage
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>Golden Touch Massage</h1>
+
+            <p>
+                Relax. Restore. Reconnect.
+                Experience comfort, relaxation, and personalized
+                massage therapy designed around your needs.
+            </p>
+
+            <a href="#pricing" class="btn">
+                View Our Pricing
+            </a>
+
+            <a href="#contact" class="btn">
+                Contact Us
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about">
+
+        <div class="section-title">
+
+            <h2>Welcome to Golden Touch Massage</h2>
+
+            <p>Your comfort is our priority.</p>
+
+        </div>
+
+        <div class="about">
+
+            <p>
+                Welcome to Golden Touch Massage, where relaxation,
+                comfort, and personalized care come together.
+            </p>
+
+            <br>
+
+            <p>
+                Our goal is to create a peaceful experience where
+                you can take a break from everyday stress and enjoy
+                quality massage therapy tailored to your needs.
+            </p>
+
+            <br>
+
+            <p>
+                Whether you're looking to relax, ease everyday
+                muscle tension, or simply enjoy some well-deserved
+                self-care, we provide a comfortable and welcoming
+                environment with professional service.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+
+        <div class="section-title">
+
+            <h2>Our Services</h2>
+
+            <p>Choose the experience that suits your needs.</p>
+
+        </div>
+
+        <div class="service-grid">
+
+            <div class="service-card">
+                <div class="icon">🌿</div>
+                <h3>Relaxation Massage</h3>
+                <p>
+                    A calming massage experience designed to help
+                    you relax and unwind.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon">💆</div>
+                <h3>Swedish Massage</h3>
+                <p>
+                    Gentle and flowing massage techniques focused
+                    on relaxation and overall comfort.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon">💪</div>
+                <h3>Deep Tissue Massage</h3>
+                <p>
+                    Focused massage techniques for areas
+                    experiencing everyday muscle tension.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon">✨</div>
+                <h3>Full Body Massage</h3>
+                <p>
+                    A relaxing full-body experience designed to
+                    leave you feeling refreshed and renewed.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRICING -->
+    <section class="pricing" id="pricing">
+
+        <div class="section-title">
+
+            <h2>Our Pricing</h2>
+
+            <p>Choose your preferred massage experience.</p>
+
+        </div>
+
+        <div class="pricing-grid">
+
+            <div class="price-card">
+                <h3>30-Minute Massage</h3>
+                <div class="price">$250</div>
+                <p>
+                    A short and relaxing massage experience.
+                </p>
+            </div>
+
+            <div class="price-card">
+                <h3>60-Minute Massage</h3>
+                <div class="price">$300</div>
+                <p>
+                    A full hour dedicated to relaxation and comfort.
+                </p>
+            </div>
+
+            <div class="price-card">
+                <h3>90-Minute Massage</h3>
+                <div class="price">$450</div>
+                <p>
+                    Extended massage time for deeper relaxation.
+                </p>
+            </div>
+
+            <div class="price-card">
+                <h3>120-Minute Massage</h3>
+                <div class="price">$600</div>
+                <p>
+                    Two hours of personalized relaxation.
+                </p>
+            </div>
+
+            <div class="price-card featured">
+                <h3>All-Night Massage</h3>
+                <div class="price">$2,000</div>
+                <p>
+                    An extended relaxation experience.
+                </p>
+            </div>
+
+            <div class="price-card">
+                <h3>Companion Experience</h3>
+                <div class="price">$800</div>
+                <p>
+                    A personalized, non-sexual companion-style
+                    experience.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+
+        <div class="section-title">
+
+            <h2>Contact Golden Touch Massage</h2>
+
+            <p>We're ready to hear from you.</p>
+
+        </div>
+
+        <div class="contact-box">
+
+            <h3>Golden Touch Massage</h3>
+
+            <p>📍 United States of America</p>
+
+            <p>
+                💬 Signal: +1 681-591-6040
+            </p>
+
+            <p>
+                🎵 TikTok: @goldentouch055
+            </p>
+
+            <div class="contact-buttons">
+
+                <a
+                    href="https://signal.me/#p/+16815916040"
+                    class="btn signal-btn"
+                    target="_blank"
+                >
+                    💬 Contact Us on Signal
+                </a>
+
+                <a
+                    href="https://www.tiktok.com/@goldentouch055"
+                    class="btn tiktok-btn"
+                    target="_blank"
+                >
+                    🎵 Follow Us on TikTok
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026
+            <span>Golden Touch Massage</span>.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+</html>
